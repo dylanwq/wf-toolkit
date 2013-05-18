@@ -1,1 +1,1 @@
-// js
+// js for weather
