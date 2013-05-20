@@ -4,7 +4,7 @@ function drawWeatherPic(ctxObj,x,y,winD,winR){
     
 	if(winD == null ||winD == 'undefined' ){return;}
 	//if(winR == null ||winR == 'undefined' ){return;}
-	if (canvas.getContext){
+	if (ctxObj.getContext){
 		var ctx = ctxObj.getContext('2d');
 		//»­µã
 		ctx.beginPath();
@@ -14,11 +14,12 @@ function drawWeatherPic(ctxObj,x,y,winD,winR){
 		//»­·çÏò
 		ctx.beginPath();
 		ctx.moveTo(x,y);
-		var left = x+Math.sin(wd*(Math.PI*2/360))*lineW;
-		var top = y-Math.cos(wd*(Math.PI*2/360))*lineW;
+		var left = x+Math.sin(winD*(Math.PI*2/360))*lineW;
+		var top = y-Math.cos(winD*(Math.PI*2/360))*lineW;
 		ctx.lineTo(left,top);
 		ctx.stroke(); 
   }else{
  
+	}
  }
 
